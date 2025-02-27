@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2020 The Proton AOSP Project
- * Copyright (C) 2024 The LineageOS Project
+ * Copyright (C) 2024-2025 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,6 +23,9 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.util.Log;
 
+import java.io.File;
+import java.io.IOException;
+
 public class BootReceiver extends BroadcastReceiver {
     private static final String TAG = "SimpleSettingsConfig";
 
@@ -35,6 +38,18 @@ public class BootReceiver extends BroadcastReceiver {
     }
 
     private void updateDefaultConfigs(Context context) {
+        File firstBootDoneFile = new File(context.getFilesDir() + "/.first_boot_done");
+        if (!firstBootDoneFile.exists()) {
+            updateConfig(context, R.array.configs_first_boot_base);
+            updateConfig(context, R.array.configs_first_boot_device);
+
+            try {
+                firstBootDoneFile.createNewFile();
+            } catch (IOException e) {
+                Log.e(TAG, "Failed to create " + firstBootDoneFile.getPath(), e);
+            }
+        }
+
         updateConfig(context, R.array.configs_base);
         updateConfig(context, R.array.configs_device);
     }
