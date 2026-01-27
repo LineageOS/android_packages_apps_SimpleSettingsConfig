@@ -23,6 +23,8 @@ import android.content.Intent;
 import android.provider.Settings;
 import android.util.Log;
 
+import lineageos.providers.LineageSettings;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -82,6 +84,18 @@ public class BootReceiver extends BroadcastReceiver {
 
                 case "system":
                     Settings.System.putString(context.getContentResolver(), key, value);
+                    break;
+
+                case "lineage_global":
+                    LineageSettings.Global.putString(context.getContentResolver(), key, value);
+                    break;
+
+                case "lineage_secure":
+                    LineageSettings.Secure.putString(context.getContentResolver(), key, value);
+                    break;
+
+                case "lineage_system":
+                    LineageSettings.System.putString(context.getContentResolver(), key, value);
                     break;
 
                 default:
