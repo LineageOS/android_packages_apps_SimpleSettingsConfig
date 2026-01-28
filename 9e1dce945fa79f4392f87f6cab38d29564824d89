@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f31ddb0a_bf68c522",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-01-28T00:00:26Z",
+      "side": 1,
+      "message": "appears to work on clean flash for `battery_light_enabled` on pro1x",
+      "revId": "9e1dce945fa79f4392f87f6cab38d29564824d89",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
