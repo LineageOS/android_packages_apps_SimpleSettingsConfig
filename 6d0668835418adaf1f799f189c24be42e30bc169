@@ -16,6 +16,24 @@
       "message": "I\u0027d like this on 22.2 as well, so maybe merge here and ff instead?",
       "revId": "6d0668835418adaf1f799f189c24be42e30bc169",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b843c7a_73ca5a61",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-01-28T20:05:33Z",
+      "side": 1,
+      "message": "Can be merged to 23.0 and pushed also to this branch.",
+      "parentUuid": "a5e165f7_567c335a",
+      "revId": "6d0668835418adaf1f799f189c24be42e30bc169",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
